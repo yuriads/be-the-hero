@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';//Para navegar entres as paginas
-import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';//o TouchableOpacity torna qlq coisa clicável  diminuindo sua opacidade. o Flatlist serve para fazer a rolagem dos itens na tela
+import {View, FlatList, Image, Text, TouchableOpacity } from 'react-native';//o TouchableOpacity torna qlq coisa clicável  diminuindo sua opacidade. o Flatlist serve para fazer a rolagem dos itens na tela
 
 import api from '../../services/api';
 

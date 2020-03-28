@@ -1,4 +1,5 @@
-const crypto = require('crypto');//além de criptografia, o crypto serve para gerar textos aleatórios
+//const crypto = require('crypto');//além de criptografia, o crypto serve para gerar textos aleatórios
+const generateUniqueId = require ('../utils/generateUniqueId');
 const connection = require('../database/connection');
 
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
     async create(request, response) {//o request guarda todos os dados que vem da nossa requisição e o response é responsável por retornar uma informção para um usuário
         const { name, email, whatsapp, city, uf} = request.body;
 
-        const id = crypto.randomBytes(4).toString('HEX');// gera 4 caracteres aleatorios e os transforma para hexadecimal
+        const id = generateUniqueId();
 
         await connection('ongs').insert({
             id,
